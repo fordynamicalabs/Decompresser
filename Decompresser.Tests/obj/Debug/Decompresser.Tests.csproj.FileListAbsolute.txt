@@ -1,0 +1,9 @@
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\Decompresser.Tests.dll
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\Decompresser.Tests.pdb
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\Decompresser.exe
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\Decompresser.pdb
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\obj\Debug\Decompresser.Tests.csprojResolveAssemblyReference.cache
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\obj\Debug\Decompresser.Tests.dll
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser.Tests\obj\Debug\Decompresser.Tests.pdb

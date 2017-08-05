@@ -7,3 +7,6 @@ C:\Users\john_\Desktop\Unzipper\Decompresser\Decompresser\obj\Debug\Decompresser
 C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\bin\Debug\Decompresser.exe.config
 C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\obj\Debug\Decompresser.exe
 C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\obj\Debug\Decompresser.pdb
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\bin\Debug\Decompresser.exe
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\bin\Debug\Decompresser.pdb
+C:\Users\john_\Desktop\Unzipper\DecompresserCloned\Decompresser\Decompresser\bin\Debug\VisualStudioGitIgnore.dll

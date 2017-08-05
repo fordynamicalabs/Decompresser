@@ -16,7 +16,7 @@ namespace Decompresser
         {
             ProcessNames();
 
-            _dService = new DecompresService(path, search_pattern);
+            _dService = new DecompresService(path, search_pattern, true);
             _dService.ExtractAll();
            
             Console.WriteLine("\nPress enter to finish.");

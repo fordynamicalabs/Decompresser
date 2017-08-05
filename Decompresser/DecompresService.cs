@@ -9,16 +9,43 @@ namespace Decompresser
     /// <summary>
     /// Service for decompressing archives
     /// </summary>
-    internal class DecompresService : IDecompresService
+    public class DecompresService : IDecompresService
     {
         #region Fields
 
-        private readonly ZipArchive _zip;
+        public ZipArchive _zip { get; set; }
         private List<string> _extracted_files;
+        private string _temp_directory;
+
+        List<string> IDecompresService._extracted_files
+        {
+            get
+            {
+                return _extracted_files;
+            }
+
+            set
+            {
+                _extracted_files = value;
+            }
+        }
+
+        string IDecompresService._temp_directory
+        {
+            get
+            {
+                return _temp_directory;
+            }
+
+            set
+            {
+                _temp_directory = value;
+            }
+        }
 
         private readonly string _path_from;
         private readonly string _search_pattern;
-        private readonly string _temp_directory;
+        private readonly bool _auto_play;
 
         #endregion
 
@@ -30,16 +57,22 @@ namespace Decompresser
         /// </summary>
         /// <param name="path_from">path to compressed file</param>
         /// <param name="search_pattern">search pattern for specifying wich files we want to extract</param>
-        public DecompresService(string path_from, string search_pattern)
+        /// <param name="auto_play">if true - creating temp directory and reading archive will start automatically</param>
+        public DecompresService(string path_from, string search_pattern, bool auto_play)
         {
             _path_from = path_from;
             _search_pattern = search_pattern;
-
-            //Open archive
-            _zip = OpenRead();
-            //Creating Temp Directory
-            _temp_directory = CreateTempDirectory();
             _extracted_files = new List<string>();
+            _auto_play = auto_play;
+
+            if (_auto_play)
+            {
+                //Open archive
+                _zip = OpenRead();
+                //Creating Temp Directory
+                _temp_directory = CreateTempDirectory();
+            }
+
         }
 
         #endregion
@@ -74,9 +107,12 @@ namespace Decompresser
                 //2 - Run Empty method for file
                 SomeMethod(path);
             }
-            
+
             //3 - After all Remove Temp Directory
-            RemoveTempDirectory();
+            if (_auto_play)
+            {
+                RemoveTempDirectory();
+            }
         }
 
         /// <summary>
@@ -107,8 +143,13 @@ namespace Decompresser
         {
             try
             {
-                Directory.Delete(_temp_directory,true);
-                Console.WriteLine("Temporary directory has been deleted");
+                if (Directory.Exists(_temp_directory))
+                {
+                    Directory.Delete(_temp_directory, true);
+                    Console.WriteLine("Temporary directory has been deleted");
+                }
+                else
+                    Console.WriteLine(string.Format("Directory with name '{0}' is not exist", _temp_directory));
             }
             catch (Exception ex)
             {
